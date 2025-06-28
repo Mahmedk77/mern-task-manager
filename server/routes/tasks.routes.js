@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import { createTask,  deleteTask,  getAllTasks } from '../controller/tasks.controller.js';
+import { createTask,  deleteTask,  getAllTasks, updateTask } from '../controller/tasks.controller.js';
 
 const taskRoute = Router()
 
@@ -7,9 +7,7 @@ taskRoute.get('/', getAllTasks)
 
 taskRoute.post('/', createTask)
 
-taskRoute.put('/:id', (req, res) => {
-    res.send('update this Task')  
-})
+taskRoute.put('/:id', updateTask)
 
 taskRoute.delete('/', deleteTask)
 
