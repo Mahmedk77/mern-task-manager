@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {Heading, TasksList, VerificationMsg, TaskInput} from './';
 import { getAllTasks, createTask, deleteTask } from "../utils/taskAPI.js";
-import {Trash2Icon } from "lucide-react";
 
 function Home() {
   const [task, setTask] = useState("");
@@ -10,14 +9,13 @@ function Home() {
 
   useEffect(() => {
     fetchTasks();
-    // console.log(getTasks)
   }, []);
 
   const fetchTasks = async () => {
     try {
       const res = await getAllTasks();
       setGetTasks(res?.data?.data);
-      console.log(res?.data?.data)
+      console.log(res?.data?.data);
     } catch (error) {
       console.log(error);
     }
@@ -25,7 +23,9 @@ function Home() {
 
   const handleCreate = async () => {
     try {
+
       task && (await createTask(task));
+      // await createTask(task)
       setMessage("Task Created Sucessfully");
       await fetchTasks();
       setMessage('')
@@ -48,16 +48,6 @@ function Home() {
       console.log(error);
     }
   };
-
-  const handleUpdate = () => {
-    try {
-      
-
-    } catch (error) {
-      
-    }
-  }
-
   return (
     <section className="bg-black flex justify-center items-center ">
       <div
@@ -66,12 +56,11 @@ function Home() {
       >
         <Heading />
         <TaskInput task={task} setTask={setTask} handleCreate={handleCreate} />
-        <VerificationMsg message={message} setMessage={setMessage} />
-        <TasksList  getTasks={getTasks} handleDelete={handleDelete} handleUpdate={handleUpdate}/>
+        <VerificationMsg message={message} />
+        <TasksList  getTasks={getTasks} handleDelete={handleDelete} />
       </div>
     </section>
   );
 }
 
-export default Home;
-
+export default Home

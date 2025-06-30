@@ -8,6 +8,10 @@ const taskSchema = new mongoose.Schema({
         require: [true, "Please Enter a Task"],
         trim: true,
         lowercase: true
+    },
+    completed:{
+        type: Boolean,
+        default: false
     }
 }, {timestamps:true})
 

@@ -4,4 +4,5 @@ const BASE_URL = "http://localhost:5000/api/v1/task/";
 export const getAllTasks = async () => axios.get(BASE_URL);
 export const createTask = async (task) => axios.post(BASE_URL, {task});
 export const deleteTask = async (taskId) => axios.delete(BASE_URL, {data: {task : taskId}});
-export const updateTask = async (updatedTask,id) => axios.put(`${BASE_URL},/${id}`, {updatedTask})
+export const updateTask = async (task, id, flag) => axios.put(`${BASE_URL}${id}`, {task, flag})
+export const getTask = async (id) => axios.get(`${BASE_URL}${id}`)

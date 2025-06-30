@@ -6,6 +6,7 @@ export { default as VerificationMsg } from './VerificationMsg.jsx';
 export { default as TaskInput} from './TaskInput.jsx';
 export { default as Home} from './Home.jsx';
 export { default as UpdatePage} from './UpdatePage.jsx';
+export { default as UpdatePageList} from './UpdatePageList.jsx';
 
 
 

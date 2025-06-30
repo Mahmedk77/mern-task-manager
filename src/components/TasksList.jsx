@@ -10,8 +10,8 @@ const TasksList = ({getTasks, handleDelete, handleUpdate}) => {
         {getTasks.map((data) => {
             
             return (
-                <TakeItem handleDelete={handleDelete} handleUpdate={handleUpdate}
-                dataId={data._id} 
+                <TakeItem handleDelete={handleDelete} 
+                dataId={data._id} checked={data.completed}
                 dataTask={data.task} key={data._id}/>
             );
         })}

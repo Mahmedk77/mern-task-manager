@@ -4,7 +4,6 @@ import React from 'react'
 const Btns = ({icon, handleDelete, handleUpdate}) => {
     
     const handleClick = () => {
-        if (icon == 'edit') handleUpdate()
         if (icon == 'remove') handleDelete()
     }
   return (

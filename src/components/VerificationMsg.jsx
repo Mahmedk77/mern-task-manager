@@ -1,5 +1,5 @@
 
-const VerificationMsg = ({message, setMessage}) => {
+const VerificationMsg = ({message}) => {
     return(
        <div className="mb-2">
          <p className="text-xs text-green-500">
