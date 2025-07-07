@@ -1,13 +1,18 @@
 import {TakeItem} from './index.js'
  
-const TasksList = ({getTasks, handleDelete, handleUpdate}) => {
+const TasksList = ({getTasks, handleDelete, empty}) => {
     return (
 
     <div
-        className="overflow-y-auto overflow-x-hidden w-xl h-auto
-    flex flex-col justify-center items-center m-2 space-x-1 scroll-smooth scroll-hidden"
+        className=" 
+    overflow-auto overflow-x-hidden 
+    w-2xl rounded-xl p-5
+     m-2 
+     scroll-smooth max-h-[20rem]
+    isolate bg-white/10  shadow-lg ring-1 ring-black/5" 
     >
-        {getTasks.map((data) => {
+        {getTasks.length == 0 ? <h1 className='text-white text-center'>{empty}</h1> : <div className='flex flex-col justify-center items-center gap-2 m-2'>
+            {getTasks.map((data) => {
             
             return (
                 <TakeItem handleDelete={handleDelete} 
@@ -15,6 +20,8 @@ const TasksList = ({getTasks, handleDelete, handleUpdate}) => {
                 dataTask={data.task} key={data._id}/>
             );
         })}
+        </div>}
+        
     </div>
 
 
@@ -22,3 +29,5 @@ const TasksList = ({getTasks, handleDelete, handleUpdate}) => {
 }
 
 export default TasksList
+
+

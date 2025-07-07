@@ -8,11 +8,11 @@ const Btns = ({icon, handleDelete, handleUpdate}) => {
     }
   return (
     <button className="rounded-full w-[1.8rem] cursor-pointer aspect-[1/1] 
-    flex justify-center items-center p-1 bg-amber-500 hover:bg-amber-600"
+    flex justify-center items-center p-1 "
      onClick={handleClick}>
         {
-            (icon == 'edit') && <SquarePen size={"1.1rem"} color="white"/> ||
-            (icon == 'remove') &&  <Trash2Icon size={"1.1rem"} color="white" />
+            (icon == 'edit') && <SquarePen size={"1.15rem"}   className='btn-hover'/> ||
+            (icon == 'remove') &&  <Trash2Icon size={"1.15rem"} className='btn-hover'/>
         }
     </button>
   )

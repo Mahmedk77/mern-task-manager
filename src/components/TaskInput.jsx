@@ -2,24 +2,28 @@
 
 const TaskInput = ({task, setTask, handleCreate}) => {
   return (
-    <div className="relative mb-2">
+    <div className="relative mb-5 bg-white rounded-full pop w-xl ">
           <input
-            className="w-xs rounded-2xl text-xs p-2 border-1"
+            className="w-xl px-5 py-3 text-sm font-light focus:outline-none" 
             type="text"
             value={task}
             onChange={(e) => setTask(e.target.value)}
-            placeholder="Enter your task here..."
+            placeholder="type here..."
+            
           />
           
           <button
-            className="absolute right-[-1px] top-[0.5px] h-[2.085rem] text-white bg-orange-400 
-        hover:bg-orange-500 cursor-pointer rounded-2xl w-[5.2rem] p-1 focused-none"
+            className="absolute right-[2px] top-[2px] text-center w-[7rem] text-md font-semibold tracking-wider
+        rounded-full border-black p-2 cursor-pointer text-gray-300
+        transition-all duration-200 bg-black focused-none hover:text-white"
             onClick={() => handleCreate()}
           >
-            Enter
+            enter
           </button>
     </div>
   )
 }
 
 export default TaskInput
+    // <button 
+    

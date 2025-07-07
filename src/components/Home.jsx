@@ -6,6 +6,7 @@ function Home() {
   const [task, setTask] = useState("");
   const [message, setMessage] = useState("");
   const [getTasks, setGetTasks] = useState([]);
+  const [empty, setEmpty] = useState("No Tasks Found");
 
   useEffect(() => {
     fetchTasks();
@@ -48,16 +49,17 @@ function Home() {
       console.log(error);
     }
   };
-  return (
-    <section className="bg-black flex justify-center items-center ">
-      <div
-        className="w-3xl h-[30rem] bg-[hsl(30,33%,99%)]
-     text-black text-center p-8 flex flex-col justify-start items-center gap-2 "
-      >
-        <Heading />
-        <TaskInput task={task} setTask={setTask} handleCreate={handleCreate} />
+  return ( 
+    <section className=' bg-black h-screen flex justify-center items-start relative pop' >
+    <div className="w-7xl h-[95%] bg-[url('/456.png')]  bg-cover bg-center 
+    bg-no-repeat rounded-b-3xl gap-[6rem] shadow-2xl 
+    shadow-blue-500/20 flex justify-center items-center">
+        {/* <Heading /> */}
+        <div className=" h-[30rem] flex items-center justify-start flex-col mt-[7rem] gap-[5rem]">
+          <TaskInput task={task} setTask={setTask} handleCreate={handleCreate} />
+        <TasksList  getTasks={getTasks} handleDelete={handleDelete} empty={empty} />
         <VerificationMsg message={message} />
-        <TasksList  getTasks={getTasks} handleDelete={handleDelete} />
+        </div>
       </div>
     </section>
   );

@@ -38,9 +38,16 @@ const UpdatePage = () => {
   };
 
   return (
-    <section className="bg-blue-100 h-screen flex flex-col justify-center items-center gap-10">
-      <div className="border-2 w-2xl h-[25rem] bg-white rounded-xl flex flex-col justify-center items-center gap-2">
-        <h1 className="text-3xl font-extrabold mb-[3rem] "> Edit Task </h1>
+    // <section className=' bg-black h-screen flex justify-center items-start relative' >
+    
+    <section className="bg-black h-screen flex flex-col justify-center items-center gap-10 pop">
+    <div className="w-7xl h-[95%] bg-[url('/456.png')]  bg-cover bg-center 
+    bg-no-repeat rounded-b-3xl gap-[6rem] shadow-2xl 
+    shadow-blue-500/20 flex justify-center items-center flex-col ">
+      <div className="flex flex-col justify-center items-center h-[38rem]">
+        <h1 className="text-3xl font-semibold  text-white mb-3 tracking-wide "> Edit Task </h1>
+      <div className="w-2xl h-[25rem] text-white p-5
+      isolate bg-white/10 shadow-lg ring-1 ring-black/5 rounded-xl flex flex-col justify-center items-center gap-5">
         {data.map((element) => {
           return (
             <div
@@ -54,25 +61,31 @@ const UpdatePage = () => {
           );
         })}
         <button
-          className="bg-orange-400 text-white w-xs rounded-sm font-bold
-         hover:bg-orange-500 cursor-pointer p-1"
+          className="bg-[#ffffffd1]  w-xs rounded-full font-bold
+         hover:bg-white text-black cursor-pointer p-2 mt-3 text-xl transition-all duration-200 "
           onClick={handleUpdate}
         >
           Update
         </button>
         <VerificationMsg message={message} />
       </div>
-      <Link to={"/"}>
+      <Link to={"/start"}>
         <button
-          className="w-sm p-2 text-white bg-gray-950 font-bold rounded-md
-         hover:text-gray-300 cursor-pointer"
+          className="w-sm p-2 mt-6  text-gray-300 text-md font-semibold rounded-md
+         hover:text-white cursor-pointer
+          isolate bg-white/5 shadow-lg ring-1 ring-black/5
+          hover:bg-white/10 transition-all duration-200"
         >
           Back to Tasks
         </button>
       </Link>
+      </div>
+      </div>
     </section>
   );
 };
 
 export default UpdatePage;
+
+
 

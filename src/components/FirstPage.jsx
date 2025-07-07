@@ -18,7 +18,7 @@ const FirstPage = () => {
         stay productive throughout your day.
     </p>
 
-    <Link to={'/home'}>
+    <Link to={'/start'}>
     <button className='orb text-white p-2 rounded-3xl w-[10rem] tracking-wider
     text-xl text-center isolate bg-white/10 shadow-lg ring-1 ring-black/5 cursor-pointer hover:bg-white/20 transition-all duration-200'>
         START

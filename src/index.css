@@ -17,4 +17,13 @@
 .pop{
     font-family: "Poppins", sans-serif;
 }
+.btn-hover{
+    color: hsl(0, 0%, 80%);
+    &:hover {
+        color: white;
+    }
+}
+/* .see {
+color: #000000b5
 
+} */
