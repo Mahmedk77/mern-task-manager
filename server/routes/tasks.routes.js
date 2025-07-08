@@ -9,7 +9,7 @@ taskRoute.get('/', getAllTasks)
 
 taskRoute.post('/', createTask)
 
-taskRoute.put('/:id', updateTask)
+taskRoute.put('/update/:id', updateTask)
 
 taskRoute.delete('/', deleteTask)
 

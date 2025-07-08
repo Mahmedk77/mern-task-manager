@@ -6,7 +6,7 @@ function Home() {
   const [task, setTask] = useState("");
   const [message, setMessage] = useState("");
   const [getTasks, setGetTasks] = useState([]);
-  const [empty, setEmpty] = useState("No Tasks Found");
+  const [empty, setEmpty] = useState("Looks like your task list is empty!");
 
   useEffect(() => {
     fetchTasks();

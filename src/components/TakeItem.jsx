@@ -14,7 +14,7 @@ const TakeItem = ({ dataId, dataTask, handleDelete, checked }) => {
                 {dataTask}
             </p>
             <div className="flex justify-center items-center w-[5rem]  bg-black rounded-full p-1">
-                <Link to={`/${dataId}`}>
+                <Link to={`/update/${dataId}`}>
                     <Btns icon={'edit'} />
                 </Link>
                 <Btns icon={'remove'} handleDelete={() => handleDelete(dataId)} />
