@@ -6,7 +6,7 @@ const TasksList = ({getTasks, handleDelete, empty}) => {
     <div
         className=" 
     overflow-auto overflow-x-hidden 
-    w-sm sm:w-2xl rounded-xl p-5
+    w-[19rem] sm:w-sm md:w-2xl rounded-xl p-5
     m-2 
     scroll-smooth max-h-[20rem]
     isolate bg-white/10  shadow-lg ring-1 ring-black/5" 

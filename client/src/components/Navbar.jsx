@@ -5,8 +5,8 @@ import { Link } from 'react-router'
 const Navbar = () => {
   return (
     <div className="flex justify-between items-center pop
-    w-sm sm:w-5xl py-2 px-2 sm:px-4 rounded-full  
-    absolute top-10 sm:top-4 left-1/2 -translate-x-1/2 z-50  isolate bg-white/20 shadow-lg ring-1 ring-black/5 cursor-pointer font-semibold"
+    w-xs sm:w-xl md:w-3xl lg:w-4xl py-2 px-2 sm:px-4 rounded-full mt-12 sm:mt-5
+     isolate bg-white/20 shadow-lg ring-1 ring-black/5 cursor-pointer font-semibold"
     >
         <Link to={'/'}>
         <button className='flex  justify-center gap-2 items-center w-[4rem] sm:w-[7rem] 

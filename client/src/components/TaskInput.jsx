@@ -2,9 +2,9 @@
 
 const TaskInput = ({task, setTask, handleCreate}) => {
   return (
-    <div className="relative mb-5 bg-white rounded-full pop w-xs sm:w-xl border-white border-2">
+    <div className="relative mb-5 bg-white rounded-full pop w-[19rem] sm:w-xs md:w-xl border-white border-2 ">
           <input
-            className="w-xs sm:w-xl px-5 py-2 sm:py-3 text-sm font-light focus:outline-none" 
+            className="w-[15rem] sm:w-xs md:w-xl px-5 py-2 sm:py-3 text-sm font-light focus:outline-none" 
             type="text"
             value={task}
             onChange={(e) => setTask(e.target.value)}

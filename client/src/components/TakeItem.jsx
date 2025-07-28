@@ -6,7 +6,7 @@ import { Link } from "react-router"
 const TakeItem = ({ dataId, dataTask, handleDelete, checked }) => {
     return (
         <div
-            className="flex justify-between items-center w-xs sm:w-xl bg-white font-normal
+            className="flex justify-between items-center w-[18rem] sm:w-xs md:w-xl bg-white font-normal
     rounded-full hover:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.08)] px-1 py-1 "
             key={dataId}
         >
