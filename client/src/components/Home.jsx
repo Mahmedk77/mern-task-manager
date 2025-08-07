@@ -39,17 +39,17 @@ function Home() {
         await fetchTasks(true);
         setMessage("Task Created Sucessfully");
       } else{
-        setMessage("Please enter a task")
+        setMessage("Please enter a task");
       }
 
-      setTimeout(() => setMessage(""), 2000)
+      setTimeout(() => setMessage(""), 2000);
       
 
       setTask("");
     } catch (error) {
       // console.log(error);
       setMessage("Task Creation Error");
-      setTask("")
+      setTask("");
     }
   };
 
@@ -58,7 +58,8 @@ function Home() {
       await deleteTask(taskId);
       setMessage('Task Deleted');
       await fetchTasks(false);
-      setMessage('')
+      setTimeout(() => setMessage(""), 2000);
+
     } catch (error) {
       // console.log(error);
     }
