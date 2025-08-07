@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { data } from "../utils/data";
 import { getTask, updateTask } from "../utils/taskAPI";
 import { Link, useParams } from "react-router-dom";
 import { UpdatePageList, VerificationMsg } from "./";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const UpdatePage = () => {
   const [task, setTask] = useState("");
   const [message, setMessage] = useState("");
   const [flag, setFlag] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const id = useParams().id;
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const UpdatePage = () => {
         setFlag(res?.data?.data?.completed)
       } catch (error) {
         console.log(error);
-      }
+      } 
     };
     fetchTask();
   }, [id]); //since our useEffect depends on Id so its better to add it as dependency
@@ -33,7 +35,9 @@ const UpdatePage = () => {
   };
 
   const handleUpdate = async () => {
+    setIsLoading(true);
     await updateTask(task, id, flag);
+    setIsLoading(false)
     setMessage("Task Updated Successfully");
   };
 
@@ -62,7 +66,12 @@ const UpdatePage = () => {
         >
           Update
         </button>
-        <VerificationMsg message={message} />
+        {
+          isLoading 
+          ? <ClipLoader color={"white"} loading={true} size={20} />
+          : <VerificationMsg message={message} />
+        }
+        
       </div>
       <Link to={"/start"}>
         <button
@@ -75,8 +84,7 @@ const UpdatePage = () => {
         </button>
       </Link>
       </div>
-    //   </div>
-    // </section>
+ 
   );
 };
 

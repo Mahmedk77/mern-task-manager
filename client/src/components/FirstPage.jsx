@@ -3,15 +3,15 @@ import { Link } from 'react-router'
 
 const FirstPage = () => {
   return (
-    <div className='flex flex-col justify-center items-center mt-10 sm:mt-0 gap-12 sm:gap-[6rem]'>
+    <div className='flex flex-col justify-center items-center mt-10 sm:mt-0 gap-12 lg:gap-[6rem]'>
     <h1 className='text-white text-3xl sm:text-4xl md:text-[4rem] orb 
      leading-tight text-center tracking-wide'>
         Welcome To <br /> 
         Task Manager 
     </h1>
     <p className='text-gray-300 font-extralight text-center tracking-wider pop px-6 sm:p-0 text-xs sm:text-sm md:text-xl'>
-        A minimal task manager built for speed and  <br />
-        focus. Quickly add, edit, or remove tasks to  <br />
+        A minimal task manager built for speed and  <br className='hidden sm:inline'/>
+        focus. Quickly add, edit, or remove tasks to  <br className='hidden sm:inline' />
         stay productive throughout your day.
     </p>
 
