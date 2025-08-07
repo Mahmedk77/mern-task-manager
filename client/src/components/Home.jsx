@@ -58,7 +58,7 @@ function Home() {
       await deleteTask(taskId);
       setMessage('Task Deleted');
       await fetchTasks(false);
-      setTimeout(() => setMessage(""), 2000);
+      setTimeout(() => setMessage(""), 1000);
 
     } catch (error) {
       // console.log(error);
