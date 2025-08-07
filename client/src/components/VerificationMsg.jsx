@@ -1,10 +1,8 @@
 
 const VerificationMsg = ({message}) => {
     return(
-       <div className="mb-2">
-         <p className="text-xs text-white">
-            {message}
-        </p>
+       <div className="w-full text-center h-[1rem]">
+         <p className="text-white text-xs sm:text-sm">{message}</p>
        </div>
     )
 

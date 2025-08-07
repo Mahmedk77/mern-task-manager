@@ -7,7 +7,7 @@ const TasksList = ({getTasks, handleDelete, empty}) => {
         className=" 
     overflow-auto overflow-x-hidden 
     w-[19rem] sm:w-sm md:w-2xl rounded-xl p-5
-    m-2 scroll-smooth h-[10rem] lg:h-[14rem]
+    m-2 scroll-smooth h-[18rem] sm:h-[15rem]
     isolate bg-white/10 shadow-lg ring-1 ring-black/5" 
     >
         {getTasks.length == 0 ? <h1 className='text-white text-center h-full flex items-center justify-center'>{empty}</h1> : <div className='flex flex-col justify-center items-center gap-2 m-2'>

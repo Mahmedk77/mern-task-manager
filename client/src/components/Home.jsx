@@ -64,10 +64,10 @@ function Home() {
     }
   };
   return ( 
-    <div className=" h-[30rem]  flex items-center justify-start flex-col mt-[7rem] gap-4 sm:gap-[2rem]">
+    <div className=" h-[30rem]  flex items-center justify-start flex-col mt-[7rem] gap-4 ">
           <TaskInput task={task} setTask={setTask} handleCreate={handleCreate} />
-          {isLoading ? <ClipLoader color={"white"} loading={true} size={20} /> : <TasksList  getTasks={getTasks} handleDelete={handleDelete} empty={empty} />}
           <VerificationMsg message={message} />
+          {isLoading ? <ClipLoader color={"white"} loading={true} size={20} /> : <TasksList  getTasks={getTasks} handleDelete={handleDelete} empty={empty} />}
     </div>
   )
 }
